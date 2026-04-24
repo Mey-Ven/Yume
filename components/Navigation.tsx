@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 
 export default function Navigation() {
@@ -38,11 +39,15 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="group flex items-center gap-3">
-            <div className="relative w-11 h-11">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold-400 to-crimson-600 opacity-90 group-hover:opacity-100 transition" />
-              <div className="absolute inset-[2px] rounded-full bg-ink-950 flex items-center justify-center">
-                <span className="font-jp text-gold-400 text-lg font-bold">夢</span>
-              </div>
+            <div className="relative w-12 h-12 transition-transform duration-500 group-hover:scale-105">
+              <Image
+                src="/logo-yume.svg"
+                alt="Yume Sushi logo"
+                fill
+                priority
+                className="object-contain"
+                sizes="48px"
+              />
             </div>
             <div className="hidden sm:block">
               <div className="font-display text-xl font-semibold shimmer-gold tracking-wide">Yumē</div>

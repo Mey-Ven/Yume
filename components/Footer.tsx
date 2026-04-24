@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, MapPin, Heart } from 'lucide-react';
+import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 
 export default function Footer() {
@@ -26,10 +27,13 @@ export default function Footer() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold-400 to-crimson-600" />
-                <div className="absolute inset-[2px] rounded-full bg-ink-950 flex items-center justify-center">
-                  <span className="font-jp text-gold-400 text-xl font-bold">夢</span>
-                </div>
+                <Image
+                  src="/logo-yume.svg"
+                  alt="Yume Sushi logo"
+                  fill
+                  className="object-contain"
+                  sizes="48px"
+                />
               </div>
               <div>
                 <div className="font-display text-2xl font-semibold shimmer-gold tracking-wide">Yumē</div>

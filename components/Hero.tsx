@@ -129,7 +129,7 @@ export default function Hero() {
       {/* Main content */}
       <motion.div
         style={{ y: smoothY, opacity, scale }}
-        className="relative z-20 min-h-screen flex flex-col items-center justify-center px-6 pb-12 md:pb-20"
+        className="relative z-20 min-h-screen flex flex-col items-center justify-center px-6 pt-0 md:pt-32 pb-12 md:pb-20"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
